@@ -18051,6 +18051,12 @@ button {
   font-size: 3rem;
 }
 
+a {
+  --text-opacity: 1;
+  color: #2c5282;
+  color: rgba(44, 82, 130, var(--text-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

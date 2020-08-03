@@ -19,3 +19,6 @@ button {
 .number {
   @apply font-bold text-5xl;
 }
+a {
+  @apply text-blue-800;
+}
