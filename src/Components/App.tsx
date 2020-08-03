@@ -20,7 +20,8 @@ const App = () => {
           @evoroxv
         </a>{" "}
         came up with this game.{" "}
-        <a href="https://twitter.com/kkuchta">@kkuchta</a> just coded it.
+        <a href="https://twitter.com/kkuchta">@kkuchta</a> just{" "}
+        <a href="https://github.com/kkuchta/number-go-up">coded</a> it.
       </div>
     </div>
   );
