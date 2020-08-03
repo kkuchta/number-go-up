@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button {
+  @apply font-bold p-4 border rounded-md border-solid border-black;
+  @apply flex self-center m-3 justify-center;
+  @apply w-full;
+}
+@screen sm {
+  button {
+    @apply w-32 p-2;
+  }
+}
+
+.numberBox {
+  @apply text-center;
+}
+.number {
+  @apply font-bold text-5xl;
+}
