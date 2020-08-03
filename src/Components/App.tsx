@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
-import Game, { GameState, Message } from "./game";
+import Game, { GameState, Message } from "../game";
 
 const displayMessage = (message: Message) => {
   switch (message) {

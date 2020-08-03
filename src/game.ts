@@ -23,7 +23,7 @@ const Game = {
     };
   },
   nextState: (state: GameState): GameState | null => {
-    const { roll, hit, monster, health } = state;
+    const { hit, monster, health } = state;
     let nextState = { ...state, roll: null };
     // We're displaying a roll now, so next we either win/lose/continue
     switch (Game.getMessage(state)) {
@@ -41,7 +41,7 @@ const Game = {
       case "lose":
         return null;
       default:
-        throw "unhandled state!!";
+        throw Error("unhandled state!!");
     }
   },
   getMessage: (state: GameState): Message => {
@@ -54,12 +54,10 @@ const Game = {
     if (totalHit > monster) {
       return monster === 26 ? "win" : "slay";
     } else if (totalHit < monster) {
-      return health == 1 ? "lose" : "got_hit";
+      return health === 1 ? "lose" : "got_hit";
     } else {
       return "tie";
     }
-
-    throw "unknown message state";
   },
 };
 export default Game;
