@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Game, { GameState, Message } from "../game";
+import Game, { GameState } from "../game";
 import PlayingGame from "./PlayingGame";
 import IntroScreen from "./IntroScreen";
 
