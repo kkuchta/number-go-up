@@ -1,7 +1,7 @@
 import React from "react";
 import Game, { GameState, Message } from "../game";
 
-const displayMessage = (message: Message) => {
+const displayMessage = (message: Message, bigBad: boolean) => {
   switch (message) {
     case "got_hit":
       return (
@@ -19,7 +19,13 @@ const displayMessage = (message: Message) => {
     case "ready_to_roll":
       return (
         <span>
-          A <b>monster</b> is before you. Roll to fight it!
+          A <b>monster</b> is before you.{" "}
+          {bigBad && (
+            <>
+              It's the <b>Big Bad Boss!</b>
+            </>
+          )}{" "}
+          Roll to fight it!
         </span>
       );
     case "slay":
@@ -91,11 +97,12 @@ const PlayingGame: React.FC<PlayingGameProps> = ({
           </>
         )}
       </div>
-      <div className="text-center h-24">{displayMessage(message)}</div>
+      <div className="text-center h-24">
+        {displayMessage(message, monster === 26)} {}
+      </div>
       <button onClick={() => setGameState(Game.nextState(gameState))}>
         {buttonText(message)}
       </button>
-      {monster === 26 && <div>Big bad!</div>}
     </>
   );
 };
